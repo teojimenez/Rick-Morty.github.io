@@ -1,13 +1,9 @@
-# Rick-Morty
-Web made with the Rick & Morty API.
-## Media
-# Mi Proyecto
-<div style="display: flex;">
-    <div style="display: grid; gap: 3px;">
-        <img src="img/main-location.png" width="400">
-        <img src="img/main-character.png" width="400">
-    </div>
-    <img src="img/breakpoint-show.png" width="300" height="440" style="margin-left: 3px;">
+# Rick-Morty 
+<div align="center">
+<hr>
+<p >"Made with the Rick & Morty API"</p>
+<hr>
+<img src="img/collage.png" width="700">
 </div>
 
 ## Features
@@ -18,4 +14,4 @@ Web made with the Rick & Morty API.
 ### More information
 Credits:
 - [API](https://teojimenez.github.io/Rick-Morty.github.io/)
-- 
+
