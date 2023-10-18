@@ -1,0 +1,114 @@
+:root {
+    --colorPrincipal: #F9EBDE;
+    --colorSecundario: #815854;
+}
+
+header{
+    padding: 1em;
+    display: flex;
+    /* flex-end, para que este a la derecha */
+    justify-content:space-between;
+    background: var(--colorSecundario);
+    margin-bottom: 30px;
+}
+.headerList {
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0; 
+    display: flex;
+    align-items: center;
+}
+
+.headerList a {
+    margin-right: 20px;
+    padding: 7px;
+    background-color: var(--colorPrincipal);
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    color:black;
+}
+
+.especial{
+margin-left: 10px;
+}
+
+.buscar{
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    color:black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color:whitesmoke;
+}
+
+body{
+    background: var(--colorPrincipal);
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.residents{
+    margin-top: 20px;
+}
+
+img{
+height: 100px;
+width: 100px;
+border-radius: 15px;
+border: 1px solid rgb(0, 0, 0);
+}
+.card{
+    /* display: flex; */
+    /* width: max-content; */
+    min-height: 200px;
+    background: var(--colorSecundario);
+    margin: 25px;
+    padding: 30px;
+    border-radius: 15px;
+
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: var(--colorPrincipal);
+    border-radius: 15px;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+ul{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px){
+
+:root {
+    --colorSecundario: #F9EBDE;
+    --colorPrincipal: #815854;
+}
+
+.card h2, h1{
+    color:rgb(0, 0, 0);
+}
+.headerList a{
+    color:whitesmoke;
+}
+
+
+
+}
