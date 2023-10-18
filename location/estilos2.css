@@ -2,7 +2,11 @@
     --colorPrincipal: #F9EBDE;
     --colorSecundario: #815854;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    color:whitesmoke;
+}
 header{
     padding: 1em;
     display: flex;
@@ -40,11 +44,6 @@ margin-left: 10px;
     color:black;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    color:whitesmoke;
-}
 
 body{
     background: var(--colorPrincipal);

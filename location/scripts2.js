@@ -9,7 +9,6 @@ verLocation(url)
 
 function verLocation(url)
 {
-
     fetch(url)
     .then(respuesta => respuesta.json())
     .then(datos =>{
