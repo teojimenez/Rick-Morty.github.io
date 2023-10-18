@@ -1,7 +1,8 @@
 # Rick-Morty 
 <div align="center">
   <hr>
-  <p >"Made with the Rick & Morty API"</p>
+  <p>"Made with the Rick & Morty API"</p>
+  <a href="https://teojimenez.github.io/Rick-Morty.github.io/">Explore the website</a>
   <hr>
   <img src="img/collage.png" width="700">
 </div>
