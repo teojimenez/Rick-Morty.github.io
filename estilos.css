@@ -1,6 +1,7 @@
 :root {
-    --colorPrincipal: #F9EBDE;
-    --colorSecundario: #815854;
+    --colorPrincipal: #3f5a3f;
+    --colorSecundario: #588157;
+    --color3: #1b313b;
 }
 *{
     margin: 0;
@@ -12,25 +13,38 @@ header{
     display: flex;
     /* flex-end, para que este a la derecha */
     justify-content:space-between;
-    background: var(--colorSecundario);
+    /* background: var(--colorPrincipal); */
+    background: linear-gradient(#2d432d, var(--colorPrincipal));
     margin-bottom: 30px;
-    
-    }
-    .headerList {
-    list-style-type: none;  
-    margin: 0;  
-    padding: 0; 
-    display: flex;
-    align-items: center;
-    }
-    
-    .headerList a {
-    margin-right: 20px;
-    padding: 7px;
-    background-color: var(--colorPrincipal);
-    text-decoration: none;
-    border-radius: 10px;
-    border: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid black;
+}
+
+main{
+    margin-bottom: 50px;
+}
+
+.buscar{
+    height: 17px;
+
+}
+.headerList {
+list-style-type: none;  
+margin: 0;  
+padding: 0; 
+display: flex;
+align-items: center;
+}
+
+.headerList a {
+margin-right: 20px;
+padding: 7px;
+background-color: white;
+border-radius: 10px;
+border: 1px solid var(--color3);
+}
+.headerLI a{
+        text-decoration: none;
+        color: black;
     }
     .especial{
     margin-left: 10px;
@@ -41,7 +55,7 @@ header{
     border: 1px solid rgb(0, 0, 0);
     }
 body{
-    background: var(--colorPrincipal);
+    background: linear-gradient(var(--colorSecundario), rgb(60, 99, 56))
 }
 main{
     display: flex;
@@ -53,13 +67,15 @@ main{
 .card {
     height: 260px;
     width: 210px;
-    background: var(--colorSecundario);
-    border: 3px solid rgb(255, 255, 255);
+    /* filter: blur(3px); */
+    /* background: var(--colorPrincipal); */
+    border: 0.1px solid rgb(255, 255, 255);
     padding: 10px 10px;
     border-radius: 10px;
     overflow: hidden; 
     /*overflow: hidden; hace que no se vea salir desde fuera */
     position:relative;
+    background: linear-gradient(var(--colorSecundario) 70%, rgb(60, 99, 56))
 }
 .info{
     object-fit: contain;
@@ -105,6 +121,19 @@ ul{
     transform: translateY(0);
 }
 
+.card img {
+    /* transition: transform 0.5s ease, opacity 0.5s ease; */
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover .name{
+    opacity: 0;
+}
 
 .card:hover img {
     position: absolute;
@@ -113,22 +142,12 @@ ul{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition-property: transform;
-    transition-duration: 0.8s; 
-    transition-timing-function: ease-in-out;
     z-index: 1;
-    transform: scale(1.05);
 }
 
 .card:hover .info {
     transform: translateY(0);
     z-index: 2;
-}
-
-.card:hover .name {
-    /* visibility: hidden; */
-    opacity: 0;
-    transition: opacity 0.8s ease-in;
 }
 
 @media screen and (max-width: 600px){
