@@ -4,7 +4,7 @@
   <p>"Made with the Rick & Morty API"</p>
   <a href="https://teojimenez.github.io/Rick-Morty.github.io/" target="_blank">Explore the website</a>
   <hr>
-  <img src="img/collage.png" width="700">
+  <img src="img/main-character.png" width="700">
 </div>
 
 ## Features
@@ -15,7 +15,6 @@
 ## Media
 - [Page-Character](img/main-character.png)
 - [Page-Location](img/main-location.png)
-- [Mobile-Breakpoint](img/breakpoint-show.png)
 ### More information
 Credits:
 - [API](https://teojimenez.github.io/Rick-Morty.github.io/)
