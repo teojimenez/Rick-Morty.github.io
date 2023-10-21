@@ -1,29 +1,29 @@
 const url = 'https://rickandmortyapi.com/api/character'
 
-const contenedor = document.querySelector('main')
+const container = document.querySelector('main')
 
-const formulario = document.querySelector('.form')
-const buscar = document.querySelector('.buscar')
+const form = document.querySelector('.form')
+const searchIn = document.querySelector('.search')
 
-verCharacter(url)
+showCharacter(url)
 
-function verCharacter(url)
+function showCharacter(url)
 {
 
     fetch(url)
-    .then(respuesta => respuesta.json())
-    .then(datos =>{
-        console.log(datos.results)
-        imprimirCharacter(datos.results)
+    .then(answer => answer.json())
+    .then(data =>{
+        console.log(data.results)
+        printCharacter(data.results)
     })
     .catch(error => console.log(error))
 }
 
-function imprimirCharacter(datos)
+function printCharacter(data)
 {
-    contenedor.innerHTML = ''
+    container.innerHTML = ''
     //quitar los ya hechos
-    datos.forEach(character => {
+    data.forEach(character => {
         const{name,status,species,type,gender,origin,location,image} = character
         const elemCharac = document.createElement('div')
         elemCharac.classList.add('card')
@@ -42,19 +42,17 @@ function imprimirCharacter(datos)
 
                 </ul>
             </div>`
-        contenedor.appendChild(elemCharac)
+        container.appendChild(elemCharac)
     })
 }
 
-
-formulario.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const busqueda = buscar.value
+    const search = searchIn.value
 
-    if(busqueda)
+    if(search)
     {
-        verCharacter(url + '/?name=' + busqueda)
+        showCharacter(url + '/?name=' + search)
     }
 })
-

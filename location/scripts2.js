@@ -1,27 +1,27 @@
 const url = 'https://rickandmortyapi.com/api/location'
 
-const contenedor = document.querySelector('main')
+const container = document.querySelector('main')
 
-const formulario = document.querySelector('.form')
-const buscar = document.querySelector('.buscar')
+const form = document.querySelector('.form')
+const searchIn = document.querySelector('.search')
 
-verLocation(url)
+showLocation(url)
 
-function verLocation(url)
+function showLocation(url)
 {
     fetch(url)
-    .then(respuesta => respuesta.json())
-    .then(datos =>{
-        console.log(datos.results)
-        imprimirLocation(datos.results)
+    .then(answer => answer.json())
+    .then(data =>{
+        console.log(data.results)
+        printLocation(data.results)
     })
     .catch(error => console.log(error))
 }
 
-function imprimirLocation(datos) {
-    contenedor.innerHTML = '';
+function printLocation(data) {
+    container.innerHTML = '';
   
-    datos.forEach(location => {
+    data.forEach(location => {
       const { name, type, dimension, residents } = location;
   
       const elemLoc = document.createElement('div');
@@ -45,18 +45,18 @@ function imprimirLocation(datos) {
         list.appendChild(img);
       });
   
-      contenedor.appendChild(elemLoc);
+      container.appendChild(elemLoc);
     });
   }
 
 
-formulario.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const busqueda = buscar.value
+    const search = searchIn.value
 
-    if(busqueda)
+    if(search)
     {
-        verLocation(url + '/?name=' + busqueda)
+        showLocation(url + '/?name=' + search)
     }
 })

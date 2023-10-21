@@ -1,20 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,700&family=Lato:ital,wght@1,700&display=swap');
+
 :root {
-    --colorPrincipal: #F9EBDE;
-    --colorSecundario: #815854;
+    --color1: #3f5a3f;
+    --color2: #588157;
 }
+
 *{
     margin: 0;
     padding: 0;
     color:whitesmoke;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Lato', sans-serif;
 }
+
 header{
     padding: 1em;
     display: flex;
-    /* flex-end, para que este a la derecha */
     justify-content:space-between;
-    background: var(--colorSecundario);
+    background: linear-gradient(#2d432d, var(--color1));
     margin-bottom: 30px;
+    border-bottom: 1px solid black;
 }
+
 .headerList {
     list-style-type: none;  
     margin: 0;  
@@ -26,56 +33,44 @@ header{
 .headerList a {
     margin-right: 20px;
     padding: 7px;
-    background-color: var(--colorPrincipal);
+    background-color: white;
     text-decoration: none;
     border-radius: 10px;
     border: 1px solid rgb(0, 0, 0);
     color:black;
 }
 
-.especial{
-margin-left: 10px;
-}
+.special{margin-left: 10px;}
 
-.buscar{
+.search{
     padding: 7px;
     border-radius: 10px;
     border: 1px solid rgb(0, 0, 0);
     color:black;
+    height: 17px;
 }
 
+body{background: linear-gradient(var(--color2), rgb(60, 99, 56))}
 
-body{
-    background: var(--colorPrincipal);
-}
+ul{list-style: none;}
 
-ul{
-    list-style: none;
-}
+h1{margin-bottom: 20px;}
 
-h1{
-    margin-bottom: 20px;
-}
-
-.residents{
-    margin-top: 20px;
-}
+.residents{margin-top: 20px;}
 
 img{
-height: 100px;
-width: 100px;
-border-radius: 15px;
-border: 1px solid rgb(0, 0, 0);
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    border: 1px solid rgb(0, 0, 0);
 }
 .card{
-    /* display: flex; */
-    /* width: max-content; */
     min-height: 200px;
-    background: var(--colorSecundario);
+    background: var(--color2);
     margin: 25px;
     padding: 30px;
     border-radius: 15px;
-
+    background: rgb(60, 99, 56);
 }
 
 .list{
@@ -85,16 +80,14 @@ border: 1px solid rgb(0, 0, 0);
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    background: var(--colorPrincipal);
+    background: linear-gradient(var(--color2), rgb(60, 99, 56));
     border-radius: 15px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
 }
 
-ul{
-    margin-bottom: 20px;
-}
+ul{margin-bottom: 20px;}
 
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
 
 :root {
     --colorSecundario: #F9EBDE;
@@ -107,7 +100,4 @@ ul{
 .headerList a{
     color:whitesmoke;
 }
-
-
-
-}
+} */
